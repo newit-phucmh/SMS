@@ -7,6 +7,6 @@ abstract class Constants{
 
   static const cSecondTextColor = Color(0xFF9d9d9d);
   static const cPlashColor = Color(0xffd9cdcd);
-
+  static const kPrimaryColor = Color(0xFFFF7643);
 
 }

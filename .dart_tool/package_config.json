@@ -194,6 +194,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_svg",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/flutter_svg-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/mptt2option3.1/Desktop/flutter/sdk/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -332,6 +338,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "path_drawing",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path_drawing-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_parsing",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path_parsing-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path_provider_linux",
       "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.2",
       "packageUri": "lib/",
@@ -354,6 +372,12 @@
       "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "petitparser",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/petitparser-4.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "platform",
@@ -608,6 +632,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "xml",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/xml-5.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "yaml",
       "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/yaml-3.1.0",
       "packageUri": "lib/",
@@ -620,7 +650,7 @@
       "languageVersion": "2.13"
     }
   ],
-  "generated": "2021-12-07T09:22:42.559157Z",
+  "generated": "2021-12-08T10:21:16.546585Z",
   "generator": "pub",
   "generatorVersion": "2.14.4"
 }

@@ -122,6 +122,10 @@ flutter_bloc
 2.12
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-8.0.0/
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-8.0.0/lib/
+flutter_svg
+2.12
+file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/flutter_svg-1.0.0/
+file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/flutter_svg-1.0.0/lib/
 formz
 2.12
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/formz-0.4.1/
@@ -206,6 +210,14 @@ path
 2.12
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/lib/
+path_drawing
+2.12
+file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path_drawing-1.0.0/
+file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path_drawing-1.0.0/lib/
+path_parsing
+2.12
+file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path_parsing-1.0.0/
+file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path_parsing-1.0.0/lib/
 path_provider_linux
 2.12
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.2/
@@ -222,6 +234,10 @@ pedantic
 2.12
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1/
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1/lib/
+petitparser
+2.14
+file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/petitparser-4.4.0/
+file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/petitparser-4.4.0/lib/
 platform
 2.12
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/platform-3.0.2/
@@ -386,6 +402,10 @@ xdg_directories
 2.12
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0/
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0/lib/
+xml
+2.14
+file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/xml-5.3.1/
+file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/xml-5.3.1/lib/
 yaml
 2.12
 file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/yaml-3.1.0/

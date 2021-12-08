@@ -38,12 +38,7 @@ class _QRScreenWidgetState extends State<QRScreenWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TextButton(
-                onPressed: (){
-                  context.read<AuthenticationBloc>()
-                      .add(AuthenticationLogoutRequested());
-                },
-                child:const Text('Logout'))
+
           ],
         ),
       ),
