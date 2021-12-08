@@ -1,0 +1,31 @@
+name: sms
+description: A new Flutter project.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.13.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.0
+  formz: ^0.4.0
+  equatable: ^2.0.0
+  http: ^0.13.4
+  json_annotation: ^4.3.0
+  shared_preferences: ^2.0.9
+  get_it: ^7.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.2.0
+  json_serializable: ^6.0.1
+  build_runner: ^2.1.5
+
+flutter:
+  uses-material-design: true
+  assets:
+  - assets/images/
+  - assets/icons/
