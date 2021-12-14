@@ -20,7 +20,7 @@ class  QRScreenBloc extends Bloc<QREvent, QRState> {
       emit(QRCheckedIn(result));
     } catch (error) {
       emit(QRCheckInFailed(error.toString()));
-      print('$error');
+      print('error $error');
     }
   }
 }

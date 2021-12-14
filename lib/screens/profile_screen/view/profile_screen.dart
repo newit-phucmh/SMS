@@ -118,7 +118,7 @@ class ProfileView extends StatelessWidget {
               ),
             );
           } else {
-            return const Text('failed');
+            return BottomLoaderWidget(strokeWidth: 3);
           }
         });
   }

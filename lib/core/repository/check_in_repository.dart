@@ -27,14 +27,11 @@ class CheckInRepository{
 
       if (response.statusCode!=200){
         await auth.logOut();
-        return 'Check in failed';
+        return 'Check in failed, you need to login again to check in';
       } else {
         dynamic bd = jsonDecode(response.body);
         return bd['message'] as String;
       }
-
-
-
     } catch (error){
       print('failed with error: $error');
       return error.toString();

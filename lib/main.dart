@@ -5,6 +5,8 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:sms/screens/main/view/main_screen.dart';
 import 'package:sms/screens/login/view/login_page.dart';
 import 'package:sms/screens/splash/view/splash_page.dart';
+import 'package:sms/size_config.dart';
+import 'package:sms/theme.dart';
 import 'authentication/bloc/authentication_bloc.dart';
 import 'core/repository/authentication_repository.dart';
 void main() async{
@@ -47,6 +49,7 @@ class _AppViewState extends State<AppView> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: theme(),
       navigatorKey: _navigatorKey,
       debugShowCheckedModeBanner: false,
       builder: (context, child) {

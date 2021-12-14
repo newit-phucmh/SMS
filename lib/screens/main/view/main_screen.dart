@@ -3,6 +3,8 @@ import 'package:sms/core/models/bottom_stateful_screen.dart';
 import 'package:sms/screens/profile_screen/view/profile_screen.dart';
 import 'package:sms/screens/qr_screen/view/qr_screen.dart';
 
+import '../../../size_config.dart';
+
 class MainScreen extends StatefulWidget {
   static Route route() {
     return MaterialPageRoute<void>(builder: (context) => MainScreen());
@@ -70,6 +72,7 @@ class MainScreenWidgetState extends State<MainScreenWidget>{
   }
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
         body: _buildScreenView(),
         bottomNavigationBar: _buildBottomNavigationBar());

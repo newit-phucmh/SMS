@@ -15,11 +15,11 @@ import 'package:sms/screens/qr_screen/bloc/qr_state.dart';
 class QRScreen extends BottomStatelessScreen {
   @override
   // TODO: implement bottomBarIcon
-  Icon get bottomBarIcon => const Icon(Icons.home);
+  Icon get bottomBarIcon => const Icon(Icons.camera);
 
   @override
   // TODO: implement bottomBarTitle
-  String get bottomBarTitle => 'Home';
+  String get bottomBarTitle => 'QR Scan';
 
   @override
   Widget build(BuildContext context) {
@@ -46,11 +46,14 @@ class _QRScreenWidgetState extends State<QRScreenWidget> {
   final qrKey = GlobalKey(debugLabel: 'QR');
   QRViewController? qrViewController;
   Barcode? barcode;
-  bool canShowQRScanner = false;
+  bool isSuccessCheckedIn = false;
 
   @override
   void initState() {
     super.initState();
+    setState(() {
+      isSuccessCheckedIn = false;
+    });
   }
 
   @override
@@ -75,17 +78,42 @@ class _QRScreenWidgetState extends State<QRScreenWidget> {
     return BlocBuilder<QRScreenBloc, QRState>(
         buildWhen: (previous, current) => previous != current,
         builder: (context, state) {
-          return Scaffold(
-              body: Stack(
-            alignment: Alignment.center,
-            children: <Widget>[
-              buildQRView(context),
-              Positioned(bottom: 10, child: buildResult(
-                (state is QRCheckedIn)?state.mess:'Scan a code'
-              )),
-              Positioned(top: 10, child: buildControlButtons())
-            ],
-          ));
+          if (!isSuccessCheckedIn) {
+            return Scaffold(
+                body: Stack(
+                  alignment: Alignment.center,
+                  children: <Widget>[
+                    buildQRView(context),
+                    Positioned(
+                        bottom: 10,
+                        child: buildResult('Scan a code')),
+                    Positioned(top: 10, child: buildControlButtons())
+                  ],
+                ));
+          } else {
+            return Scaffold(
+                body: Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        (state is QRCheckedIn)
+                        ?Text(state.mess)
+                        :BottomLoaderWidget(strokeWidth: 3),
+                        TextButton(
+                            onPressed: (){
+                              setState(() {
+                                isSuccessCheckedIn = false;
+                              });
+                            },
+                            child: Text('Scan')
+                        )
+                      ],
+                    ),
+                  ),
+                );
+          }
         });
   }
 
@@ -107,73 +135,66 @@ class _QRScreenWidgetState extends State<QRScreenWidget> {
       context.read<QRScreenBloc>().add(CheckIn(barcode.code));
       setState(() {
         this.barcode = barcode;
+        isSuccessCheckedIn = true;
       });
     });
   }
 
-  Widget buildResult(String result) => Container(
-        padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10), color: Colors.white24),
-        child:
-        Text(
-            barcode != null ? 'Result: $result' : 'Scan a code!',
-            maxLines: 3),
-      );
+  Widget buildResult(String result) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10), color: Colors.white24),
+      child: Text(barcode != null ? '$result' : 'Scan a QR code!',
+          maxLines: 3),
+    );
+  }
 
   Widget buildControlButtons() {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(10),
-            bottomRight: Radius.circular(10)),
-        color: Colors.white24
-      ),
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(10),
+              bottomRight: Radius.circular(10)),
+          color: Colors.white24),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           IconButton(
-              onPressed: () async{
+              onPressed: () async {
                 await qrViewController?.toggleFlash();
                 setState(() {});
               },
               icon: FutureBuilder<bool?>(
                 future: qrViewController?.getFlashStatus(),
-                builder:(context, snapshot){
-                  if (snapshot.data!=null){
+                builder: (context, snapshot) {
+                  if (snapshot.data != null) {
                     return Icon(
-                      snapshot.data! ? Icons.flash_on : Icons.flash_off
-                    );
+                        snapshot.data! ? Icons.flash_on : Icons.flash_off);
                   } else {
                     return const Icon(Icons.flash_off);
                   }
-                    },
-              )
-          ),
+                },
+              )),
           IconButton(
-              onPressed: () async{
+              onPressed: () async {
                 await qrViewController?.flipCamera();
-                setState((){});
+                setState(() {});
               },
               icon: FutureBuilder(
                 future: qrViewController?.getCameraInfo(),
-                builder:(context, snapshot){
-                  if (snapshot.data != null){
-                    return const Icon(
-                        Icons.switch_camera
-                    );
+                builder: (context, snapshot) {
+                  if (snapshot.data != null) {
+                    return const Icon(Icons.switch_camera);
                   } else {
                     return Container();
                   }
                 },
-              )
-          ),
-
+              )),
         ],
       ),
     );
-
   }
 }

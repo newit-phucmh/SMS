@@ -10,15 +10,27 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		vLedNMluQo8A0m9DuffiG25A6Dg=
+		tPYxYgDyLKWWnqTrc3WvU2FUCGw=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
-		+D1xbIOooc3ypce1+jh+mmLy1J0=
+		ULPiUXeLJHEkN20ckBZlAA6R8Oo=
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
 		t9TbOPPxNvBWZDIJnkmFcwVIseI=
+		</data>
+		<key>flutter_assets/assets/fonts/muli/Muli-Bold.ttf</key>
+		<data>
+		od/6bHFhX7S90hQKrYlhOaIgco4=
+		</data>
+		<key>flutter_assets/assets/fonts/muli/Muli-Light.ttf</key>
+		<data>
+		4kNYHlQRyHUgE6f48je1QeAn6dQ=
+		</data>
+		<key>flutter_assets/assets/fonts/muli/Muli.ttf</key>
+		<data>
+		qi7fd9hv/4J5C4RpF3coN4KOSQI=
 		</data>
 		<key>flutter_assets/assets/icons/Back%20ICon.svg</key>
 		<data>
@@ -310,7 +322,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		sFajCaFcCnoBdexJQTjv/scjTFY=
+		G5qfZEo0QiepiiR7M1OA13ImkSM=
 		</data>
 		<key>flutter_assets/vm_snapshot_data</key>
 		<data>
@@ -323,22 +335,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vLedNMluQo8A0m9DuffiG25A6Dg=
+			tPYxYgDyLKWWnqTrc3WvU2FUCGw=
 			</data>
 			<key>hash2</key>
 			<data>
-			8vtOyE0hPvNx/+z5bfdSethNPByEe0X7f+k7Umk+c3c=
+			dxOnLbyBO1pxA15ZZCOwqpQLK8uNXEILlny9VD4iCB8=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+D1xbIOooc3ypce1+jh+mmLy1J0=
+			ULPiUXeLJHEkN20ckBZlAA6R8Oo=
 			</data>
 			<key>hash2</key>
 			<data>
-			KLHrKz0uGtYLjIsPkQCxzL9JL3+pf1vrtR6pfnOSbn0=
+			v2V1cRs2dW7SiVq4Z/SC2e9ntilIXL3ngwueDf+pEjs=
 			</data>
 		</dict>
 		<key>flutter_assets/NOTICES.Z</key>
@@ -350,6 +362,39 @@
 			<key>hash2</key>
 			<data>
 			Il+PNDIh2R4Rpm0NiuSzD6mMUBZTn6vHZ3ZjLHyf2nQ=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/fonts/muli/Muli-Bold.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			od/6bHFhX7S90hQKrYlhOaIgco4=
+			</data>
+			<key>hash2</key>
+			<data>
+			Dm8yT5iWCNGDnc4sfEvTat7KUthFTDtTk9qUKv/9e1o=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/fonts/muli/Muli-Light.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4kNYHlQRyHUgE6f48je1QeAn6dQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			l1Dta6Xr2Ru+24nO6V30noDVlz74Otysm+RodG8k+dM=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/fonts/muli/Muli.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qi7fd9hv/4J5C4RpF3coN4KOSQI=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ray6rgD7DPqEE7WCzUwNrZZTx4oFGnIVIFB5zMfH4jM=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/icons/Back%20ICon.svg</key>
@@ -1148,11 +1193,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sFajCaFcCnoBdexJQTjv/scjTFY=
+			G5qfZEo0QiepiiR7M1OA13ImkSM=
 			</data>
 			<key>hash2</key>
 			<data>
-			/8yLhC5FIgOl1X4SK1uFZ6FiVgX3O9jFnZ65blZxsWg=
+			YqD0AcsdZ2Ddj23SR6E34UFP4Ru+MyZAZWWfTly++T0=
 			</data>
 		</dict>
 		<key>flutter_assets/vm_snapshot_data</key>

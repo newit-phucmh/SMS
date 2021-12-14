@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
+import 'package:sms/core/utils/constant.dart';
+import 'package:sms/core/widgets/default_button.dart';
+import 'package:sms/core/widgets/no_account_text.dart';
+import 'package:sms/core/widgets/socal_card.dart';
 import 'package:sms/screens/login/bloc/login_bloc.dart';
+
+import '../../../size_config.dart';
 
 class LoginForm extends StatelessWidget {
   @override
@@ -16,29 +22,79 @@ class LoginForm extends StatelessWidget {
             );
         }
       },
-      child: Align(
-        alignment: const Alignment(0, -1 / 3),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _UsernameInput(),
-            const Padding(padding: EdgeInsets.all(12)),
-            _PasswordInput(),
-            const Padding(padding: EdgeInsets.all(12)),
-            _LoginButton(),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: () {
-                  print('Quen mat khau');
-                },
-                child: Text('Quên mật khẩu'),
+      child: SafeArea(
+        child: SizedBox(
+          width: double.infinity,
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+                const Text(
+                  'Welcome Back',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Text(
+                  'Sign in with your email and password',
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.08),
+                _UsernameInput(),
+                const Padding(padding: EdgeInsets.all(12)),
+                _PasswordInput(),
+                const Padding(padding: EdgeInsets.all(12)),
+                _LoginButton(),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.08),
+                Row(
+                  children: [
+                    Checkbox(
+                      value: true,
+                      activeColor: Constants.kPrimaryColor,
+                      onChanged: (value) {
 
-              ),
+                      },
+                    ),
+                    const Text('Remember me'),
+                    Spacer(),
+                    GestureDetector(
+                      onTap: () {},
+                      child: const Text(
+                        'Forgot Password',
+                        style: TextStyle(decoration: TextDecoration.underline),
+                      ),
+                    )
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SocalCard(
+                      icon: 'assets/icons/google-icon.svg',
+                      press: () {},
+                    ),
+                    SocalCard(
+                      icon: 'assets/icons/facebook-2.svg',
+                      press: () {},
+                    ),
+                    SocalCard(
+                      icon: 'assets/icons/twitter.svg',
+                      press: () {},
+                    ),
+                  ],
+                ),
+                const NoAccountText(),
+              ],
             ),
-          ],
-        ),
-      ),
+          ),
+        )
+
+      )
+
     );
   }
 }
@@ -49,14 +105,17 @@ class _UsernameInput extends StatelessWidget {
     return BlocBuilder<LoginBloc, LoginState>(
       buildWhen: (previous, current) => previous.username != current.username,
       builder: (context, state) {
-        return TextField(
+        return TextFormField(
           key: const Key('loginForm_usernameInput_textField'),
           onChanged: (username) =>
               context.read<LoginBloc>().add(LoginUsernameChanged(username)),
           decoration: InputDecoration(
-            labelText: 'username',
-            errorText: state.username.invalid ? 'invalid username' : null,
+            labelText: 'Email',
+            hintText: 'Enter your email',
+            errorText: state.username.invalid ? 'invalid email' : null,
+
           ),
+
         );
       },
     );
@@ -69,14 +128,15 @@ class _PasswordInput extends StatelessWidget {
     return BlocBuilder<LoginBloc, LoginState>(
       buildWhen: (previous, current) => previous.password != current.password,
       builder: (context, state) {
-        return TextField(
+        return TextFormField(
           key: const Key('loginForm_passwordInput_textField'),
           onChanged: (password) =>
               context.read<LoginBloc>().add(LoginPasswordChanged(password)),
           obscureText: true,
           decoration: InputDecoration(
-            labelText: 'password',
-            errorText: state.password.invalid ? 'invalid password' : null,
+              labelText: 'password',
+              hintText: 'Enter password',
+              errorText: state.password.invalid ? 'invalid password' : null,
           ),
         );
       },
@@ -92,15 +152,14 @@ class _LoginButton extends StatelessWidget {
       builder: (context, state) {
         return state.status.isSubmissionInProgress
             ? const CircularProgressIndicator()
-            : ElevatedButton(
-                key: const Key('loginForm_continue_raisedButton'),
-                child: const Text('Login'),
-                onPressed: state.status.isValidated
-                    ? () {
-                        context.read<LoginBloc>().add(const LoginSubmitted());
-                      }
-                    : null,
-              );
+            : DefaultButton(
+          text: 'Login',
+          press: state.status.isValidated
+              ? () {
+            context.read<LoginBloc>().add(const LoginSubmitted());
+          }
+              : null,
+        );
       },
     );
   }
