@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:sms/core/models/login_response_model.dart';
 import 'package:sms/core/utils/constant.dart';
-import 'package:sms/core/utils/shared_prefs.dart';
 
 
 class LoginRepository{
 
   Future<LoginResponseModel> login(String username, String password) async {
+    print('$username, $password');
     var url = Uri.parse('${Constants.server}/auth/login');
     var response = await http.post(
         url,

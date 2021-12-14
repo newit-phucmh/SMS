@@ -1,6 +1,8 @@
 # This is a generated file; do not edit or check into version control.
 path_provider_linux=/Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.2/
 path_provider_windows=/Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.4/
+permission_handler=/Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/permission_handler-8.3.0/
+qr_code_scanner=/Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/qr_code_scanner-0.4.0/
 shared_preferences=/Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.9/
 shared_preferences_android=/Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/shared_preferences_android-2.0.9/
 shared_preferences_ios=/Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/shared_preferences_ios-2.0.8/

@@ -117,33 +117,6 @@ class ProfileView extends StatelessWidget {
                 ],
               ),
             );
-
-            //   Column(
-            //   crossAxisAlignment: CrossAxisAlignment.start,
-            //   children: [
-            //     Text('Họ và tên: '
-            //         '${state.studentProfileModel.firstName} '
-            //         '${state.studentProfileModel.lastName}'),
-            //     Text('MSSV: ${state.studentProfileModel.id}'),
-            //     Text('Email: ${state.studentProfileModel.email}'),
-            //     Text('Lớp: ${state.studentProfileModel.className}'),
-            //     Text('Tuổi: ${state.studentProfileModel.age}'),
-            //     UserButtonWidget(
-            //       title: "Sản phẩm đã xem",
-            //       leading: const Icon(
-            //         Icons.remove_red_eye,
-            //         color: Colors.black,
-            //       ),
-            //       trailing: const Icon(
-            //         Icons.arrow_forward_ios_rounded,
-            //         color: Colors.black,
-            //       ),
-            //       onTap: () {
-            //
-            //       },
-            //     ),
-            //   ],
-            // );
           } else {
             return const Text('failed');
           }

@@ -1,18 +1,17 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sms/core/utils/app_route.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:sms/screens/main/view/main_screen.dart';
 import 'package:sms/screens/login/view/login_page.dart';
 import 'package:sms/screens/splash/view/splash_page.dart';
 import 'authentication/bloc/authentication_bloc.dart';
 import 'core/repository/authentication_repository.dart';
-import 'injection_container.dart' as di;
-void main() async {
-  runApp(App(
-    authenticationRepository: AuthenticationRepository()
-  ));
+void main() async{
+
+    runApp(App(
+        authenticationRepository: AuthenticationRepository()
+    ));
 }
 
 class App extends StatelessWidget {

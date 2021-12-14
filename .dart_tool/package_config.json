@@ -3,13 +3,13 @@
   "packages": [
     {
       "name": "_fe_analyzer_shared",
-      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-30.0.0",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-31.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "analyzer",
-      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/analyzer-2.7.0",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/analyzer-2.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -273,13 +273,13 @@
     },
     {
       "name": "json_annotation",
-      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/json_annotation-4.3.0",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/json_annotation-4.4.0",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "json_serializable",
-      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/json_serializable-6.0.1",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/json_serializable-6.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -374,6 +374,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "permission_handler",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/permission_handler-8.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "permission_handler_platform_interface",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/permission_handler_platform_interface-3.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "petitparser",
       "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/petitparser-4.4.0",
       "packageUri": "lib/",
@@ -381,7 +393,7 @@
     },
     {
       "name": "platform",
-      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/platform-3.0.2",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/platform-3.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -417,7 +429,13 @@
     },
     {
       "name": "pubspec_parse",
-      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/pubspec_parse-1.1.0",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/pubspec_parse-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "qr_code_scanner",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/qr_code_scanner-0.4.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -501,7 +519,7 @@
     },
     {
       "name": "source_gen",
-      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/source_gen-1.1.1",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/source_gen-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -597,7 +615,7 @@
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/vm_service-7.4.0",
+      "rootUri": "file:///Users/mptt2option3.1/.pub-cache/hosted/pub.dartlang.org/vm_service-7.5.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -650,7 +668,7 @@
       "languageVersion": "2.13"
     }
   ],
-  "generated": "2021-12-08T10:21:16.546585Z",
+  "generated": "2021-12-09T11:13:39.431102Z",
   "generator": "pub",
   "generatorVersion": "2.14.4"
 }
