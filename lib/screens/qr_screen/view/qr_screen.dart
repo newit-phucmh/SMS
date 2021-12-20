@@ -5,9 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:sms/authentication/bloc/authentication_bloc.dart';
 import 'package:sms/core/models/bottom_stateful_screen.dart';
 import 'package:sms/core/repository/check_in_repository.dart';
 import 'package:sms/core/widgets/bottom_loader_widget.dart';
+import 'package:sms/core/widgets/default_button.dart';
+import 'package:sms/screens/login/login.dart';
 import 'package:sms/screens/qr_screen/bloc/qr_bloc.dart';
 import 'package:sms/screens/qr_screen/bloc/qr_event.dart';
 import 'package:sms/screens/qr_screen/bloc/qr_state.dart';
@@ -81,38 +84,62 @@ class _QRScreenWidgetState extends State<QRScreenWidget> {
           if (!isSuccessCheckedIn) {
             return Scaffold(
                 body: Stack(
-                  alignment: Alignment.center,
-                  children: <Widget>[
-                    buildQRView(context),
-                    Positioned(
-                        bottom: 10,
-                        child: buildResult('Scan a code')),
-                    Positioned(top: 10, child: buildControlButtons())
-                  ],
-                ));
+              alignment: Alignment.center,
+              children: <Widget>[
+                buildQRView(context),
+                Positioned(bottom: 10, child: buildResult('Scan a code')),
+                Positioned(top: 10, child: buildControlButtons())
+              ],
+            ));
           } else {
-            return Scaffold(
+            if(state is QRCheckedIn){
+              if (state.mess.contains('Token expired')){
+                  context.read<AuthenticationBloc>()
+                      .add(AuthenticationLogoutRequested());
+              }
+            }
+              return Scaffold(
                 body: Center(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        (state is QRCheckedIn)
-                        ?Text(state.mess)
-                        :BottomLoaderWidget(strokeWidth: 3),
-                        TextButton(
-                            onPressed: (){
-                              setState(() {
-                                isSuccessCheckedIn = false;
-                              });
-                            },
-                            child: Text('Scan')
-                        )
-                      ],
-                    ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+                      Image.asset(
+                        'assets/images/success.png',
+                        height: MediaQuery.of(context).size.height * 0.4, //40%
+                      ),
+                      SizedBox(height: MediaQuery.of(context).size.height * 0.08),
+                      (state is QRCheckedIn)
+                          ? Text(
+                        state.mess,
+                        style: const TextStyle(
+                          fontSize: 23,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      )
+                          : BottomLoaderWidget(strokeWidth: 3),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.04,
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: DefaultButton(
+                          text: 'Scan',
+                          press: () {
+                            setState(() {
+                              isSuccessCheckedIn = false;
+                            });
+                          },
+                        ),
+                      ),
+                    ],
                   ),
-                );
+                ),
+              );
+
           }
         });
   }
@@ -145,8 +172,7 @@ class _QRScreenWidgetState extends State<QRScreenWidget> {
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10), color: Colors.white24),
-      child: Text(barcode != null ? '$result' : 'Scan a QR code!',
-          maxLines: 3),
+      child: Text(barcode != null ? '$result' : 'Scan a QR code!', maxLines: 3),
     );
   }
 

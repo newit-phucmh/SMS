@@ -6,7 +6,6 @@ import 'package:sms/core/utils/constant.dart';
 
 class CheckInRepository{
   Future<String> checkIn(String courseId) async {
-    final auth = AuthenticationRepository();
     var sharedPr =await SharedPreferences.getInstance();
     var token = sharedPr.getString('token');
     var userId =sharedPr.getString('userId');
@@ -24,10 +23,8 @@ class CheckInRepository{
       print('Response status: ${response.statusCode}');
       print('Response body: ${response.body}');
 
-
       if (response.statusCode!=200){
-        await auth.logOut();
-        return 'Check in failed, you need to login again to check in';
+        return 'Token expired';
       } else {
         dynamic bd = jsonDecode(response.body);
         return bd['message'] as String;

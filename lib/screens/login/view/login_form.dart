@@ -9,7 +9,13 @@ import 'package:sms/screens/login/bloc/login_bloc.dart';
 
 import '../../../size_config.dart';
 
-class LoginForm extends StatelessWidget {
+class LoginForm extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _LoginFormState();
+}
+
+class _LoginFormState extends State<LoginForm>{
+  bool? remember = false;
   @override
   Widget build(BuildContext context) {
     return BlocListener<LoginBloc, LoginState>(
@@ -26,10 +32,14 @@ class LoginForm extends StatelessWidget {
         child: SizedBox(
           width: double.infinity,
           child: SingleChildScrollView(
-            padding: const EdgeInsets.all(10),
             child: Column(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisSize: MainAxisSize.max,
               children: [
+                Image.asset(
+                  'assets/images/logo.png',
+                  height: MediaQuery.of(context).size.height * 0.1,
+                  scale: 1.0,//40%
+                ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.04),
                 const Text(
                   'Welcome Back',
@@ -49,14 +59,17 @@ class LoginForm extends StatelessWidget {
                 _PasswordInput(),
                 const Padding(padding: EdgeInsets.all(12)),
                 _LoginButton(),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.08),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                 Row(
                   children: [
                     Checkbox(
-                      value: true,
+                      value: remember,
+                      shape: const CircleBorder(),
                       activeColor: Constants.kPrimaryColor,
                       onChanged: (value) {
-
+                        setState(() {
+                          remember = value;
+                        });
                       },
                     ),
                     const Text('Remember me'),
@@ -94,9 +107,9 @@ class LoginForm extends StatelessWidget {
         )
 
       )
-
     );
   }
+
 }
 
 class _UsernameInput extends StatelessWidget {

@@ -110,7 +110,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		Amb1DFDxFVqyTGTLEvWmd2nD5BM=
+		euUL28VXD8cNSf8MM8liyAAczRc=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -118,11 +118,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		MxEK9Lh/JgGhWN3Bn3nY/JsbdKc=
+		dtzLIDrridA7QAXt5MHbihPIA3g=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		tPYxYgDyLKWWnqTrc3WvU2FUCGw=
+		X9uXXpsSBxi+xfIthtJ59tpzYmU=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -348,6 +348,10 @@
 		<data>
 		csjkp6b2vPqozoebcqBusLvrU6E=
 		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/logo.png</key>
+		<data>
+		NGghIPvLF+bY8mxdzvkOUWJZEzA=
+		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/mastercard-2.png</key>
 		<data>
 		4S/pD7rPW8DjuETA/3NsY1KlmiM=
@@ -434,7 +438,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		G5qfZEo0QiepiiR7M1OA13ImkSM=
+		xCYSGTsxmHHGufTNRf5RTE0aIoE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/vm_snapshot_data</key>
 		<data>
@@ -530,7 +534,7 @@
 		</data>
 		<key>Frameworks/MTBBarcodeScanner.framework/MTBBarcodeScanner</key>
 		<data>
-		9yJghMersiy+Ujgz5KVaze8i2e8=
+		O85O+ux/oeFr5ptqqjNEqMsOS9Y=
 		</data>
 		<key>Frameworks/MTBBarcodeScanner.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -610,7 +614,7 @@
 		</data>
 		<key>Frameworks/qr_code_scanner.framework/qr_code_scanner</key>
 		<data>
-		gzUPuMDUrF8PaAod7BHabFJs+ak=
+		YqutB7n4KKLvGNUay0T3lZa02Bw=
 		</data>
 		<key>Frameworks/shared_preferences_ios.framework/Info.plist</key>
 		<data>
@@ -622,11 +626,11 @@
 		</data>
 		<key>Frameworks/shared_preferences_ios.framework/shared_preferences_ios</key>
 		<data>
-		USqFCD2WswXYpPZPNHOVZ5PKHyk=
+		k1KS6IZuOfZE6GiTBh65ddYMr1Y=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		x2KpRkyFFoqT/yTZudRzAuGuj6M=
+		zb0ibI8JATgG/lB3c+5LxYqz7uk=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -821,7 +825,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CSSVXw2JYTBV3nltkd6XE5V+nhnIXmqz8JekGZ2QzQM=
+			mvwtvOAwQIvErhFI1wDbyA6Tm1L6DwwjLVCwhZNYah8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -835,14 +839,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zLj0xjUhbwgSRSU3gGCCMhFQLm6N1vttQ3qQBXdAnc8=
+			CEzc5Q2ElWW5GsHUpuTlasISZnoFuisdI+eDCgOAq/k=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dxOnLbyBO1pxA15ZZCOwqpQLK8uNXEILlny9VD4iCB8=
+			8gxYBuBjR+I/Td5+xYk7P2b52kC/fRKs/L/hD6hurqA=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -1237,6 +1241,13 @@
 			aMmR6Sv15fBCrVAJf55hWnWBcJi5sNCrzTecBuvsy/U=
 			</data>
 		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/logo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HvAMeDcCD5XE6tkBfxsP6ec5Ky+RxxodEWl3O716d+4=
+			</data>
+		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/mastercard-2.png</key>
 		<dict>
 			<key>hash2</key>
@@ -1388,7 +1399,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YqD0AcsdZ2Ddj23SR6E34UFP4Ru+MyZAZWWfTly++T0=
+			knUVxYjmDmQbIxxFCDaTrqYAt8Fq4PCFyVDsSvvI3hA=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/vm_snapshot_data</key>
@@ -1556,7 +1567,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V2i4O2MDmigA2bBSuruL7eHKQUhR+lOzyX1KF8BQXKg=
+			40V0cfXoDkkA3QdSJHaTyqgh6hTH69TUQaii/fnfnko=
 			</data>
 		</dict>
 		<key>Frameworks/MTBBarcodeScanner.framework/_CodeSignature/CodeResources</key>
@@ -1696,7 +1707,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7/vTZJ5698iB0bDK6ErpQw81olqsrygWt7CPYwoh47Q=
+			mB23JkYJNkJP7ibs8ghGmMM0EwJKlJHOjczND7ldtO0=
 			</data>
 		</dict>
 		<key>Frameworks/shared_preferences_ios.framework/Info.plist</key>
@@ -1717,7 +1728,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HD0fqbvMRuP43UqLnIUP1xCNkaIg9PUS5fKKgUv+/Rc=
+			SR7P8MOJ2An4dEmVVLea7MUeaZa/ZdKxqx5/gnzdJIo=
 			</data>
 		</dict>
 	</dict>
